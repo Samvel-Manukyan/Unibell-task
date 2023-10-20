@@ -1,0 +1,24 @@
+<div class="audio-container">
+  <div class="audio-title">
+    <h2>Audio music</h2>
+    <mat-icon class="audio-title-icon">music_note</mat-icon>
+  </div>
+
+  <app-audio-list
+    [isClickedRow]="isClickedRow()"
+    [audioListData]="audioListData"
+    (rowClick)="onRowClick($event)"
+  >
+  </app-audio-list>
+
+  <div
+    class="audio-player"
+    [ngClass]="!!isClickedRow() && audioUrl() ? 'audio-player-open' : 'audio-player-close'"
+  >
+    <app-audio-player
+      [audioUrl]="audioUrl()"
+      (audioPlayerClose)="onAudioPlayerClose()"
+    >
+    </app-audio-player>
+  </div>
+</div>

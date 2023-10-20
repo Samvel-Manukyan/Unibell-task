@@ -1,0 +1,52 @@
+@use "../../../assets/styles/variables";
+@use "../../../assets/styles/mixins";
+
+.audio-container {
+  width: 95%;
+  min-height: 64vh;
+  margin: 20px auto;
+  padding: 0 20px;
+  border: 1px solid variables.$app-gray-200;
+  border-radius: 20px;
+  background-color: variables.$app-blue-100;
+  background-image: linear-gradient(62deg, variables.$app-blue-100 0%, variables.$app-violet-200 100%);
+
+  .audio-title {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .audio-title-icon {
+      font-size: 25px;
+    }
+  }
+
+  .audio-player {
+    margin-top: 50px;
+    width: 300px;
+  }
+
+  @include mixins.down-md() {
+    width: calc(100% - 16px);
+    padding: 0 8px;
+    height: 100vh;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+}
+
+.audio-player-open {
+  width: 340px !important;
+  transition: 0.3s width ease-in-out;
+
+  @include mixins.down-sm() {
+    width: 300px !important;
+    transition: 0.3s width ease-in-out;
+  }
+}
+
+.audio-player-close {
+  width: 0 !important;
+  transition: 0.05s width ease-in-out;
+}

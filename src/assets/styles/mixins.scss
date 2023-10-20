@@ -1,0 +1,73 @@
+@use 'variables';
+
+@mixin xs {
+  @media (min-width: #{variables.$xs}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{variables.$sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{variables.$md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{variables.$lg}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{variables.$xl}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: #{variables.$xxl}) {
+    @content;
+  }
+}
+
+@mixin down-xxl {
+  @media (max-width: #{variables.$down-xxl}) {
+    @content;
+  }
+}
+
+@mixin down-xl {
+  @media (max-width: #{variables.$down-xl}) {
+    @content;
+  }
+}
+
+@mixin down-lg {
+  @media (max-width: #{variables.$down-lg}) {
+    @content;
+  }
+}
+
+@mixin down-md {
+  @media (max-width: #{variables.$down-md}) {
+    @content;
+  }
+}
+
+@mixin down-sm {
+  @media (max-width: #{variables.$down-sm}) {
+    @content;
+  }
+}
+
+@mixin down-xs {
+  @media (max-width: #{variables.$down-xs}) {
+    @content;
+  }
+}

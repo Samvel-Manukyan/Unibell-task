@@ -1,0 +1,12 @@
+.audio-player-container {
+  display: flex;
+  align-items: center;
+  .icon {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  display: none;
+}
