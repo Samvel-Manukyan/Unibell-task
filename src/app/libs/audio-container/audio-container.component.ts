@@ -20,12 +20,10 @@ export class AudioContainerComponent {
   audioListData: AudioDataModel[] = audioListData;
   isClickedRow:WritableSignal<number | null> = signal(null);
   audioUrl:WritableSignal<string> = signal('');
-
   onRowClick(row: AudioDataModel) {
     this.audioUrl.set(row.audioUrl);
     this.isClickedRow.set(row.id);
   }
-
   onAudioPlayerClose() {
     this.audioUrl.set('');
     this.isClickedRow.set(null);
